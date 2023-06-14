@@ -1,0 +1,178 @@
+.create_container {
+  background-image: url("../../assets/img/comida-ingredientes.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.return_btn_position {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.return_btn_description {
+  background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
+  box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
+  border-radius: 20px;
+  border: 1px solid white;
+  color: white;
+  font-size: 16px;
+  padding: 2px 40px 2px 40px;
+}
+.return_btn_description:hover {
+  background: white;
+  cursor: pointer;
+  border: 1px solid var(--orange);
+  color: var(--orange);
+}
+
+.order__image {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
+@media (max-width: 1000px) {
+  .order__image {
+    display: none;
+  }
+}
+
+.forms__info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  border-radius: 20px;
+  color: #ffa500;
+  text-shadow: 0px 19px 60px rgba(99, 95, 95, 0.08);
+  background-color: #302b2b85;
+  box-shadow: 2px 3px 5px 3px rgb(145, 143, 143);
+  max-height: 590px; /* ajusta la altura máxima según tus necesidades */
+  overflow-y: hidden;
+}
+
+/* Estilos para los campos de entrada de texto y select */
+input[type="text"],
+textarea,
+select {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 16px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+/* Estilos para el botón de submit */
+input[type="submit"] {
+  background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
+  box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
+  border-radius: 34px;
+  border: 1px solid white;
+  color: white;
+  font-size: 16px;
+  padding: 11px 26px 11px 26px;
+}
+
+input[type="submit"]:hover {
+  background: white;
+  cursor: pointer;
+  border: 1px solid var(--orange);
+  color: var(--orange);
+}
+
+/* Estilos para los mensajes de error */
+p.danger {
+  color: #f44336;
+}
+
+/* Estilos para los chips de dieta */
+.chip {
+  display: inline-block;
+  background-color: #a8611f;
+  color: #0f0f0f;
+  border-radius: 16px 0 0 16px;
+  padding: 4px 8px;
+  margin-right: 8px;
+}
+
+.chip li {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.chip .buton__x {
+  cursor: pointer;
+}
+/* Estilos para la barra de desplazamiento vertical */
+.forms__info {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #d17711 #ce8c12;
+}
+
+.forms__info::-webkit-scrollbar {
+  width: 8px;
+  height: 20px;
+}
+
+.forms__info::-webkit-scrollbar-thumb {
+  background-color: #d17711;
+  border-radius: 4px;
+}
+
+.forms__info::-webkit-scrollbar-thumb:hover {
+  background-color: #0f0f0f;
+}
+
+/* Estilos para el texto del selector */
+.forms__info::-webkit-scrollbar-thumb {
+  color: white;
+}
+
+/* Estilos para el fondo del selector */
+.forms__info::-webkit-scrollbar-track {
+  background-color: #222;
+}
+/* Estilos para las opciones del selector */
+.forms__info select option {
+  background-color: transparent;
+  color: white;
+}
+
+/* Estilos para el fondo del selector */
+.forms__info select {
+  background-color: #444;
+}
+.scoreTitle {
+  color: white;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.scoreBar {
+  /* background-color: #444; */
+  border-radius: 4px;
+  height: 20px;
+  position: relative;
+}
+
+.scoreNum {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  position: absolute;
+  right: 40px;
+  top: -8px;
+}
