@@ -90,7 +90,7 @@ export default function Filtros({ diet }) {
         <option value="defauls" disabled>
           Score...
         </option>
-        <option value="asc" selected>
+        <option value="asc" defaultValue>
           Lower
         </option>
         <option value="des">Higher</option>

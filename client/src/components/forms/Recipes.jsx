@@ -16,7 +16,7 @@ export default function Recipes() {
 
   useEffect(() => {
     dispatch(getAllDiet());
-  }, []);
+  }, [dispatch]);
 
   const [input, setInput] = useState({
     name: "",
@@ -196,7 +196,9 @@ export default function Recipes() {
               <div>
                 <select name="diet" onChange={(e) => selectHandleDiet(e)}>
                   {diets?.map((el) => (
-                    <option value={el.name}>{el.name}</option>
+                    <option key={el.id} value={el.name}>
+                      {el.name}
+                    </option>
                   ))}
                 </select>
 
