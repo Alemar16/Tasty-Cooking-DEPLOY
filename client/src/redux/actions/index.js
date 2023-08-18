@@ -29,18 +29,17 @@ export const getAllrecipes = () => {
 
 
 
-export function postAddRecipes(payload) {
-  return function () {
-    return axios
-      .post('/recipes', payload)
-      .then((json) => {
-        alert("Recipe Created Successfully...!");
-      })
-      .catch((error) => {
-        alert("Recipe Failed.");
-      });
+export const postAddRecipes = (payload) => {
+  return async () => {
+    try {
+      await axios.post('/recipes', payload);
+      alert("Recipe Created Successfully...!");
+    } catch (error) {
+      alert("Recipe Failed.");
+    }
   };
-}
+};
+
 
 export const reset = () => {
   return {
