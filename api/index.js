@@ -3,7 +3,7 @@ const { conn } = require("./src/db.js");
 const { diet } = require("./src/controllers/RecetasApi");
 const { getApiInfo } = require("./src/controllers/ControllerRecipe");
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ alter: true }).then(() => {
   server.listen(3001, process.env.PORT, async () => {
     console.log("%s listening at 3001");
 
